@@ -1,0 +1,113 @@
+<html>
+
+<head>
+  <title>My gitExample</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+<style>
+.center{
+  margin:auto;
+}
+</style>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="default.asp">
+        <img src="logo.png" alt "circle-logo" style="width:42px">   CoinMarketCap-Clone
+      </a>
+        </nav><br>
+
+       <div class="container">
+
+       <div class="center">
+        <h3><b>Top 100 Cryptocurrencies by Market Capitalization</b> </h3>
+        <h6 style="color:grey;"> Bootcamp project: Create a clone of CoinMarketCap </h6><br><br>
+     </div>
+
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Cryptocurrencies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Exchanges</a>
+          </li>
+        </ul>
+      </div>
+
+
+        <br><br>
+
+  <table id="myList">
+
+    <tr>
+      <td>
+        <h1>rank</h1>
+      </td>
+      <td>
+        <h1>name</h1>
+      </td>
+      <td>
+        <h1>Price</h1>
+      </td>
+    </tr>
+
+  </table>
+
+  <script>
+
+    var coins = {
+
+      0: {
+        name: "btc",
+        rank: "1",
+        price: "11k"
+      },
+      1: {
+        name: "eth",
+        rank: "2",
+        price: "1k"
+      },
+      2: {
+        name: "ltc",
+        rank: "3",
+        price: "5 "
+      },
+    }
+    addtoTable()
+    function addtoTable() {
+      for (var i = 0; i < 3; i++) {
+
+        var myTable = document.getElementById('myList')
+
+        var myTr = `
+     <tr>
+    <td><h1>`+ coins[i].rank + `</h1></td>
+    <td><h1>`+ coins[i].name + `</h1></td>
+    <td><h1>`+ coins[i].price + `</h1></td>
+  </tr>`
+
+        myTable.innerHTML += myTr
+
+      }
+
+    }
+
+
+
+    function log(value) {
+
+      return console.log(value)
+
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>
