@@ -1,8 +1,3 @@
 # CLC-clone
 
-Some description!
-
-## sub header
-
-Watch tutorial on where ever
-otro cambio
+This is a project with the idea to clone Coingecko.com the crypto market cap webpage.
